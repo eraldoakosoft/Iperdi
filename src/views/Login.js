@@ -1,7 +1,7 @@
 import React from 'react'
 import { View, KeyboardAvoidingView, Image, Text, TextInput, StyleSheet, TouchableOpacity } from 'react-native'
 
-export default function App(){
+export default function App(props){
   return(
     <KeyboardAvoidingView style={styles.background} >
       <View style={styles.containerLogo} >
@@ -21,11 +21,11 @@ export default function App(){
           onChangeText={ () => {} }
         />
 
-        <TouchableOpacity style={styles.btnSubmit} >
+        <TouchableOpacity style={styles.btnSubmit} onPress={ () => props.navigation.navigate('Home') } >
           <Text style={styles.submitText} >Acessar</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity style={styles.btnRegister} >
+        <TouchableOpacity style={styles.btnRegister} onPress={ () => props.navigation.navigate('Cadastro') } >
           <Text style={styles.registerText} >Criar conta</Text>
         </TouchableOpacity>
 
