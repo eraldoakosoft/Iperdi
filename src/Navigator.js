@@ -7,6 +7,10 @@ import Icons from 'react-native-vector-icons/Ionicons'
 import Login from './views/Login'
 import Cadastro from './views/Cadastro'
 import Home from './views/Home'
+import FeedChat from './views/FeedChat'
+import Perfil from './views/Perfil'
+import Add from './views/Add'
+
 
 const Stack = createStackNavigator()
 
@@ -26,7 +30,14 @@ const Tab = createBottomTabNavigator()
 
 function MyTabs() {
     return (
-        <Tab.Navigator>
+        <Tab.Navigator  tabBarOptions={{  activeTintColor: "#040404" }}>
+            <Tab.Screen
+                name="Chat"
+                component={FeedChat}
+                options={{
+                    tabBarIcon: () => <Icons name="chatbubbles" size={30} color="#2F2F2F" />
+                }}
+            />
             <Tab.Screen
                 name="Home"
                 component={Home}
@@ -34,6 +45,22 @@ function MyTabs() {
                     tabBarIcon: () => <Icons name="home" size={30} color="#2F2F2F" />
                 }}
             />
+            <Tab.Screen
+                name="Adicionar"
+                component={Add}
+                options={{
+                    tabBarIcon: () => <Icons name="add-circle" size={30} color="#2F2F2F" />
+                }}
+            />
+            <Tab.Screen
+                name="Perfil"
+                component={Perfil}
+                options={{
+                    tabBarIcon: () => <Icons name="person" size={30} color="#2F2F2F" />,
+                    color: "#2F2F2F"
+                }}
+            />
+
         </Tab.Navigator>
     )
 }
