@@ -52,7 +52,7 @@ export default function Perfil() {
     ]
 
     return (
-        <View style={{flex: 1, paddingEnd: 15}}>
+        <View style={{flex: 1, paddingBottom: 15}}>
             <View>
                 <HeaderPerfil />
             </View>
