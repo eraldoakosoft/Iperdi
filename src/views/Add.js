@@ -1,5 +1,5 @@
 import React from 'react'
-import { Text, View } from 'react-native'
+import { StyleSheet, View } from 'react-native'
 import { ScrollView } from 'react-native-gesture-handler'
 import { ListItem } from 'react-native-elements'
 import Header from '../components/Header'
@@ -43,7 +43,7 @@ export default function Perfil() {
                         list.map((item, i) => (
                             <ListItem key={i} bottomDivider>
                                 <ListItem.Content>
-                                    <ListItem.Title>{item.title}</ListItem.Title>
+                                    <ListItem.Title style={styles.txtTitle} >{item.title}</ListItem.Title>
                                 </ListItem.Content>
                                 <ListItem.Chevron color="#000" size={20} />
                             </ListItem>
@@ -54,3 +54,10 @@ export default function Perfil() {
         </View>
     )
 }
+
+const styles = StyleSheet.create({
+    txtTitle:{
+        fontSize: 16,
+        fontFamily: 'Montserrat-SemiBold',
+    }
+})

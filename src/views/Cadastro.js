@@ -1,8 +1,8 @@
 import React from 'react'
 import { View, KeyboardAvoidingView, Image, Text, TextInput, StyleSheet, TouchableOpacity } from 'react-native'
 
-export default function App(){
-  return(
+export default function App() {
+  return (
     <KeyboardAvoidingView style={styles.background} >
       <View style={styles.containerLogo} >
         <Image source={require('../assets/img/logo-branco.png')} />
@@ -12,25 +12,25 @@ export default function App(){
           style={styles.input}
           placeholder="Nome"
           autoCorrect={false}
-          onChangeText={ () => {} }
+          onChangeText={() => { }}
         />
         <TextInput
           style={styles.input}
           placeholder="Email"
           autoCorrect={false}
-          onChangeText={ () => {} }
+          onChangeText={() => { }}
         />
         <TextInput
           style={styles.input}
           placeholder="Senha"
           autoCorrect={false}
-          onChangeText={ () => {} }
+          onChangeText={() => { }}
         />
         <TextInput
           style={styles.input}
           placeholder="Confirmar Senha"
           autoCorrect={false}
-          onChangeText={ () => {} }
+          onChangeText={() => { }}
         />
 
         <TouchableOpacity style={styles.btnSubmit} >
@@ -42,25 +42,25 @@ export default function App(){
 }
 
 const styles = StyleSheet.create({
-  background:{
+  background: {
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor: '#009FE3'
   },
-  containerLogo:{
+  containerLogo: {
     flexGrow: 1,
     justifyContent: 'flex-end',
     marginTop: 15,
   },
-  container:{
+  container: {
     flex: 5,
     alignItems: 'center',
     justifyContent: 'center',
     width: '90%',
     paddingBottom: 50
   },
-  input:{
+  input: {
     backgroundColor: '#FFF',
     width: '90%',
     marginBottom: 15,
@@ -69,7 +69,7 @@ const styles = StyleSheet.create({
     borderRadius: 7,
     padding: 10,
   },
-  btnSubmit:{
+  btnSubmit: {
     backgroundColor: '#155A9E',
     width: '90%',
     height: 45,
@@ -77,14 +77,15 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     borderRadius: 7,
   },
-  submitText:{
+  submitText: {
     color: '#FFF',
-    fontSize: 18
+    fontSize: 18,
+    fontFamily: 'Montserrat-SemiBold',
   },
-  btnRegister:{
+  btnRegister: {
     marginTop: 10
   },
-  registerText:{
+  registerText: {
     color: '#FFF'
   }
 })

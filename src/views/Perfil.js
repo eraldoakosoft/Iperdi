@@ -1,5 +1,5 @@
 import React from 'react'
-import { Text, View } from 'react-native'
+import { Text, View, StyleSheet } from 'react-native'
 import { ScrollView } from 'react-native-gesture-handler'
 import { ListItem } from 'react-native-elements'
 import Icon from 'react-native-vector-icons/Ionicons'
@@ -11,32 +11,32 @@ export default function Perfil() {
     const list = [
         {
             title: 'Notificações',
-            icon: 'notifications',
+            icon: 'notifications-outline',
             subtitle: 'Minha central de notificações'
         },
         {
             title: 'Endereço',
-            icon: 'location',
+            icon: 'location-outline',
             subtitle: 'Meu endereço'
         },
         {
             title: 'Meus dados',
-            icon: 'clipboard',
+            icon: 'clipboard-outline',
             subtitle: 'Minhas informações da conta'
         },
         {
             title: 'Carteira',
-            icon: 'wallet',
+            icon: 'wallet-outline',
             subtitle: 'Meus documentos cadastrados'
         },
         {
             title: 'Configurações',
-            icon: 'settings',
+            icon: 'settings-outline',
             subtitle: 'Minhas configurações'
         },
         {
             title: 'Sair',
-            icon: 'exit',
+            icon: 'exit-outline',
             subtitle: 'Entrar em outra conta'
         }
     ]
@@ -53,7 +53,7 @@ export default function Perfil() {
                             <ListItem key={i} bottomDivider>
                                 <Icon name={item.icon} size={35} color="#000" />
                                 <ListItem.Content>
-                                    <ListItem.Title>{item.title}</ListItem.Title>
+                                    <ListItem.Title style={styles.txtTitle} >{item.title}</ListItem.Title>
                                     <ListItem.Subtitle>{item.subtitle}</ListItem.Subtitle>
                                 </ListItem.Content>
                                 <ListItem.Chevron color="#000" size={30} />
@@ -66,3 +66,15 @@ export default function Perfil() {
         </View>
     )
 }
+
+
+const styles = StyleSheet.create({
+    txtTitle:{
+        fontSize: 16,
+        fontFamily: 'Montserrat-SemiBold',
+    },
+    txtSubTitle:{
+        fontSize: 14,
+        fontFamily: 'Montserrat-Light',
+    }
+})

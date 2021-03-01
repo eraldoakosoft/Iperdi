@@ -40,19 +40,18 @@ const styles = StyleSheet.create({
   background:{
     flex: 1,
     alignItems: 'center',
-    justifyContent: 'center',
     backgroundColor: '#009FE3'
   },
   containerLogo:{
     flex:1,
-    justifyContent: 'center'
+    justifyContent: 'center',
+    marginTop: 50
   },
   container:{
-    flex: 1,
+    flex: 6,
     alignItems: 'center',
     justifyContent: 'center',
-    width: '95%',
-    paddingBottom: 50
+    width: '95%'
   },
   input:{
     backgroundColor: '#FFF',
