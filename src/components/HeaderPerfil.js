@@ -10,7 +10,6 @@ export default function HeaderPerfil() {
                 rounded
                 title="ES"
                 activeOpacity={0.5}
-                placeholderStyle={{ backgroundColor: '#fae' }}
                 containerStyle={{ backgroundColor: '#F2F2F2' }}
                 titleStyle={ { color: '#595959' } }
             />
@@ -22,7 +21,7 @@ export default function HeaderPerfil() {
 const styles = StyleSheet.create({
     container: {
         flexDirection: 'row',
-        backgroundColor: '#595959',
+        backgroundColor: '#009FE3',
         alignItems: 'center',
         height: 100,
         alignContent: 'center',
@@ -31,7 +30,8 @@ const styles = StyleSheet.create({
     text:{
         fontSize: 28,
         marginLeft: 15,
-        color: 'white'
+        color: '#FFF',
+        fontFamily: 'Montserrat-SemiBold'
     },
 
 })

@@ -2,7 +2,7 @@ import React from 'react'
 import { Text, View } from 'react-native'
 import { ScrollView } from 'react-native-gesture-handler'
 import { ListItem } from 'react-native-elements'
-import HeaderAdd from '../components/HeaderAdd'
+import Header from '../components/Header'
 
 export default function Perfil() {
 
@@ -35,7 +35,7 @@ export default function Perfil() {
     return (
         <View style={{flex: 1}}>
             <View>
-                <HeaderAdd/>
+                <Header name="Achei"/>
             </View>
             <ScrollView showsVerticalScrollIndicator={false} >
                 <View style={{ marginBottom: 10 }} >

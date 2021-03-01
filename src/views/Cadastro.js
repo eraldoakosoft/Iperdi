@@ -5,7 +5,7 @@ export default function App(){
   return(
     <KeyboardAvoidingView style={styles.background} >
       <View style={styles.containerLogo} >
-        <Image source={require('../assets/logo-branco.png')} />
+        <Image source={require('../assets/img/logo-branco.png')} />
       </View>
       <View style={styles.container} >
         <TextInput
@@ -46,7 +46,7 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: '#595959'
+    backgroundColor: '#009FE3'
   },
   containerLogo:{
     flexGrow: 1,
@@ -70,7 +70,7 @@ const styles = StyleSheet.create({
     padding: 10,
   },
   btnSubmit:{
-    backgroundColor: '#2F2F2F',
+    backgroundColor: '#155A9E',
     width: '90%',
     height: 45,
     alignItems: 'center',

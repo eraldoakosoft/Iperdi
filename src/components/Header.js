@@ -1,10 +1,10 @@
 import React from 'react'
 import { Text, View, StyleSheet } from 'react-native'
 
-export default function HeaderPerfil() {
+export default function Header(props) {
     return (
         <View style={styles.container} >      
-            <Text style={styles.text}>Achei</Text>
+            <Text style={styles.text}>{props.name}</Text>
         </View>
     )
 }
@@ -12,17 +12,17 @@ export default function HeaderPerfil() {
 const styles = StyleSheet.create({
     container: {
         flexDirection: 'column',
-        backgroundColor: '#595959',
-        alignItems: 'center',
-        height: 50,
-        alignContent: 'center'
+        backgroundColor: '#009FE3',
+        height: 60,
+        alignContent: 'center',
     },
     text:{
         fontSize: 25,
         color: '#fff',
-        alignItems: 'center',
-        alignContent: 'center',
-        margin: 5
+        margin: 5,
+        fontFamily: 'Montserrat-SemiBold',
+        alignSelf: 'center',
+        marginTop: 10
     },
 
 })

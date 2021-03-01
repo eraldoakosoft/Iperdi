@@ -51,7 +51,7 @@ export default function Perfil() {
                     {
                         list.map((item, i) => (
                             <ListItem key={i} bottomDivider>
-                                <Icon name={item.icon} size={35} color="#2F2F2F" />
+                                <Icon name={item.icon} size={35} color="#000" />
                                 <ListItem.Content>
                                     <ListItem.Title>{item.title}</ListItem.Title>
                                     <ListItem.Subtitle>{item.subtitle}</ListItem.Subtitle>
