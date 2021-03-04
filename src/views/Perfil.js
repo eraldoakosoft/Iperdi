@@ -6,18 +6,13 @@ import Icon from 'react-native-vector-icons/Ionicons'
 
 import HeaderPerfil from '../components/HeaderPerfil'
 
-export default function Perfil() {
+export default function Perfil({navigation}) {
 
     const list = [
         {
             title: 'Notificações',
             icon: 'notifications-outline',
             subtitle: 'Minha central de notificações'
-        },
-        {
-            title: 'Endereço',
-            icon: 'location-outline',
-            subtitle: 'Meu endereço'
         },
         {
             title: 'Meus dados',
@@ -50,13 +45,13 @@ export default function Perfil() {
                 <View style={{ marginBottom: 10 }} >
                     {
                         list.map((item, i) => (
-                            <ListItem key={i} bottomDivider>
+                            <ListItem key={i} bottomDivider onPress={ ( )=> navigation.navigate( item.title !== 'Sair' ? item.title : 'Detalhes' ) } >
                                 <Icon name={item.icon} size={35} color="#000" />
-                                <ListItem.Content>
+                                <ListItem.Content  >
                                     <ListItem.Title style={styles.txtTitle} >{item.title}</ListItem.Title>
                                     <ListItem.Subtitle>{item.subtitle}</ListItem.Subtitle>
                                 </ListItem.Content>
-                                <ListItem.Chevron color="#000" size={30} />
+                                <ListItem.Chevron color="#000" size={30}  />
                             </ListItem>
                         ))
                     }

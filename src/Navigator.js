@@ -11,6 +11,11 @@ import Home from './views/Home'
 import FeedChat from './views/FeedChat'
 import Perfil from './views/Perfil'
 import Add from './views/Add'
+import Detalhes from './views/Detalhes'
+import Notificacoes from './views/perfil/Notificacoes'
+import Configuracoes from './views/perfil/Configuracoes'
+import MeusDados from './views/perfil/MeusDados'
+import Carteira from './views/perfil/Carteira'
 
 
 const Stack = createStackNavigator()
@@ -21,6 +26,11 @@ export default function MyStack() {
             <Stack.Navigator initialRouteName="Login" >
                 <Stack.Screen name="Login" component={Login} options={{ headerShown: false }} />
                 <Stack.Screen name="Cadastro" component={Cadastro} />
+                <Stack.Screen name="Detalhes" component={Detalhes} />
+                <Stack.Screen name="Meus dados" component={MeusDados} />
+                <Stack.Screen name="Configurações" component={Configuracoes} />
+                <Stack.Screen name="Carteira" component={Carteira} />
+                <Stack.Screen name="Notificações" component={Notificacoes} />
                 <Stack.Screen name="Home" component={MyTabs} options={{ headerShown: false }} />
             </Stack.Navigator>
         </NavigationContainer>

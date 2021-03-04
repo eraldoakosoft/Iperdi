@@ -1,11 +1,10 @@
 import React from "react";
 import { View, Text, StyleSheet, Image } from "react-native"
-import { TouchableOpacity } from 'react-native-gesture-handler'
 import { Avatar } from 'react-native-elements'
 
 export default function CardHome(props) {
     return (
-        <TouchableOpacity style={styles.container}  >
+        <View>
             <View style={styles.container_header}>
                 <View style={styles.container_header_1} >
                     <Avatar
@@ -34,7 +33,7 @@ export default function CardHome(props) {
                     <Text style={styles.price} >R$ {props.post.recompensa}</Text>
                 </View>
             </View>
-        </TouchableOpacity>
+        </View>
     )
 }
 
@@ -115,11 +114,11 @@ const styles = StyleSheet.create({
         fontFamily: 'Montserrat-Light',
         fontSize: 12
     },
-    container_recompensa:{
+    container_recompensa: {
         flex: 1,
         alignItems: 'flex-end'
     },
-    text:{
+    text: {
         fontFamily: 'Montserrat-SemiBold',
         color: '#000'
     }

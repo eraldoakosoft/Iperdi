@@ -1,11 +1,10 @@
 import React from 'react'
 import { Text, View } from 'react-native'
-import { ScrollView } from 'react-native-gesture-handler'
+import { ScrollView, TouchableOpacity } from 'react-native-gesture-handler'
 import Header from '../components/Header'
 import CardHome from '../components/CardHome'
 
-export default function Home() {
-
+export default function Home({navigation}) {
     const post = [
         {
             user: 'Eraldo',
@@ -35,13 +34,15 @@ export default function Home() {
             cidade: 'São Paulo-SP'
         }
     ]
-
-
+    
     return (
         <View>
             <Header name="Home" />
             <ScrollView style={{ marginBottom: 60 }} showsVerticalScrollIndicator={false} >
-                <CardHome post={post[0]} />
+                <TouchableOpacity onPress={() => navigation.navigate('Detalhes')} >
+                    
+                <CardHome post={post[0]}  />
+                </TouchableOpacity>
                 <CardHome post={post[1]} />
                 <CardHome post={post[2]} />
             </ScrollView>
